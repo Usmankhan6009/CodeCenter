@@ -25,6 +25,18 @@ function App() {
   return (
     <>
     <div class="header">Code Center</div>
+
+    <div className="pane">
+        <iframe 
+          srcDoc={srcDoc}
+          title="output"
+          sandbox="allow-scripts"
+          frameBorder="0"
+          width="100%"
+          height="100%"
+        />
+      </div>
+      
       <div className="pane top-pane">
         <Editor
           language="xml" 
@@ -45,16 +57,7 @@ function App() {
           onChange={setJs}
         />
       </div>
-      <div className="pane">
-        <iframe 
-          srcDoc={srcDoc}
-          title="output"
-          sandbox="allow-scripts"
-          frameBorder="0"
-          width="100%"
-          height="100%"
-        />
-      </div>
+      
     </>
   )
 }
